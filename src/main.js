@@ -9,6 +9,16 @@ import Vehiculos from './components/Vehiculos.vue'
 import Cruceros from './components/Cruceros.vue'
 import Planetas from './components/Planetas.vue'
 import Especies from './components/Especies.vue'
+import Peliculas from './components/Peliculas.vue'
+
+import './assets/styles/layout.css'
+import './assets/styles/framework.css'
+import './assets/styles/fontawesome-4.4.0.min.css'
+
+//import './assets/scripts/jquery.min.js'
+//import './assets/scripts/jquery.mobilemenu.js'
+//import './assets/scripts/jquery.backtotop.js'
+//import './assets/scripts/jquery.placeholder.min.js'
 
 Vue.use(VueRouter);
 
@@ -18,11 +28,13 @@ const routes = [
         { path: '/vehiculos', component: Vehiculos },
         { path: '/cruceros', component: Cruceros },
         { path: '/planetas', component: Planetas },
-        { path: '/especies', component: Especies }
+        { path: '/especies', component: Especies },
+        { path: '/peliculas', component: Peliculas }
 ];
 
 const router = new VueRouter({
-  routes
+  routes,
+  mode: 'history'
 });
 
 Vue.config.productionTip = false
